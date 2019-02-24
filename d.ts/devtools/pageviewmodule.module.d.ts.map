@@ -1,0 +1,1 @@
+{"version":3,"file":"pageviewmodule.module.d.ts","sourceRoot":"","sources":["../../ts/devtools/pageviewmodule.module.ts"],"names":[],"mappings":";AAEA,OAAO,EAAE,gBAAgB,EAAE,MAAM,2BAA2B,CAAC;AAC7D,OAAO,EAAE,aAAa,EAAE,MAAM,wBAAwB,CAAC;AAEvD,qBAAa,cAAe,SAAQ,gBAAgB;IAC3C,MAAM,EAAE,iBAAiB,CAAC;IAC1B,OAAO,EAAE,aAAa,CAAC;gBAClB,GAAG,GAAE,MAAsB;CAkBxC"}

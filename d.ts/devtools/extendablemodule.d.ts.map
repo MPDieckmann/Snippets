@@ -1,0 +1,1 @@
+{"version":3,"file":"extendablemodule.d.ts","sourceRoot":"","sources":["../../ts/devtools/extendablemodule.ts"],"names":[],"mappings":";AAEA,cAAM,gBAAgB;IACb,OAAO,cAAoC;IAC3C,MAAM,oBAAoC;IACjD,SAAS,aAAa,OAAO,EAAE,gBAAgB,CAAC,OAAO;IAGhD,OAAO;IACP,MAAM;CACd;AACD,OAAO,WAAW,gBAAgB,CAAC;IACjC,UAAU,OAAO;QACf,IAAI,EAAE,MAAM,CAAC;QACb,IAAI,EAAE,MAAM,CAAA;KACb;CACF"}
