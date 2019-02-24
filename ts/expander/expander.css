@@ -1,0 +1,209 @@
+mpc-expander,
+mpc-property-expander,
+mpc-node-expander {
+  display: block;
+  font: 1em/normal monospace;
+  cursor: default;
+}
+
+mpc-expander[expandable]>mpc-expander-label::before,
+mpc-property-expander[expandable]>mpc-expander-label::before,
+mpc-node-expander[expandable]>mpc-expander-label::before {
+  display: inline-block;
+  content: "";
+  width: 1em;
+  height: 1em;
+  line-height: 1em;
+  vertical-align: top;
+  text-align: center;
+}
+
+mpc-expander[expandable]>mpc-expander-label:first-child::before,
+mpc-property-expander[expandable]>mpc-expander-label:first-child::before,
+mpc-node-expander[expandable]>mpc-expander-label:first-child::before {
+  content: ">";
+}
+
+mpc-expander[expandable][expanded]>mpc-expander-label::before,
+mpc-property-expander[expandable][expanded]>mpc-expander-label::before,
+mpc-node-expander[expandable][expanded]>mpc-expander-label::before {
+  transform: translate(60%, 60%) rotate(90deg);
+  transform-origin: top;
+}
+
+mpc-expander[collapsed]>*,
+mpc-property-expander[collapsed]>*,
+mpc-node-expander[collapsed]>* {
+  display: none;
+}
+
+mpc-expander[collapsed]>mpc-expander-label,
+mpc-property-expander[collapsed]>mpc-expander-label,
+mpc-node-expander[collapsed]>mpc-expander-label {
+  display: inline-block;
+}
+
+mpc-expander[expanded]>mpc-expander-label,
+mpc-property-expander[expanded]>mpc-expander-label,
+mpc-node-expander[expanded]>mpc-expander-label {
+  display: block;
+}
+
+mpc-expander>mpc-expander,
+mpc-property-expander>mpc-property-expander,
+mpc-node-expander>mpc-node-expander {
+  margin-left: 0.5em;
+  padding-left: 0.5em;
+}
+
+mpc-expander>mpc-expander[expanded]>mpc-expander-label,
+mpc-expander>mpc-property-expander[expanded]>mpc-expander-label,
+mpc-expander>mpc-node-expander[expanded]>mpc-expander-label,
+mpc-property-expander>mpc-expander[expanded]>mpc-expander-label,
+mpc-property-expander>mpc-property-expander[expanded]>mpc-expander-label,
+mpc-property-expander>mpc-node-expander[expanded]>mpc-expander-label,
+mpc-node-expander>mpc-expander[expanded]>mpc-expander-label,
+mpc-node-expander>mpc-property-expander[expanded]>mpc-expander-label,
+mpc-node-expander>mpc-node-expander[expanded]>mpc-expander-label {
+  margin-left: -0.5em;
+  padding-left: 0.5em;
+}
+
+mpc-expander[collapsed]:hover,
+mpc-property-expander[collapsed]:hover,
+mpc-node-expander[collapsed]:hover,
+mpc-expander[expanded]>mpc-expander-label:hover,
+mpc-property-expander[expanded]>mpc-expander-label:hover,
+mpc-node-expander[expanded]>mpc-expander-label:hover {
+  background: #08f2;
+  border-radius: 0.25em;
+}
+
+mpc-expander:focus,
+mpc-property-expander:focus,
+mpc-node-expander:focus {
+  outline: none;
+}
+
+mpc-expander[collapsed][selected],
+mpc-property-expander[collapsed][selected],
+mpc-node-expander[collapsed][selected],
+mpc-expander[expanded][selected]>mpc-expander-label,
+mpc-property-expander[expanded][selected]>mpc-expander-label,
+mpc-node-expander[expanded][selected]>mpc-expander-label {
+  background: #8886;
+  border-radius: 0.25em;
+}
+
+mpc-expander[collapsed][selected][focus],
+mpc-property-expander[collapsed][selected][focus],
+mpc-node-expander[collapsed][selected][focus],
+mpc-expander[expanded][selected][focus]>mpc-expander-label,
+mpc-property-expander[expanded][selected][focus]>mpc-expander-label,
+mpc-node-expander[expanded][selected][focus]>mpc-expander-label,
+mpc-expander[focus] mpc-expander[collapsed][selected],
+mpc-expander[focus] mpc-property-expander[collapsed][selected],
+mpc-expander[focus] mpc-node-expander[collapsed][selected],
+mpc-expander[focus] mpc-expander[expanded][selected]>mpc-expander-label,
+mpc-expander[focus] mpc-property-expander[expanded][selected]>mpc-expander-label,
+mpc-expander[focus] mpc-node-expander[expanded][selected]>mpc-expander-label,
+mpc-property-expander[focus] mpc-expander[collapsed][selected],
+mpc-property-expander[focus] mpc-property-expander[collapsed][selected],
+mpc-property-expander[focus] mpc-node-expander[collapsed][selected],
+mpc-property-expander[focus] mpc-expander[expanded][selected]>mpc-expander-label,
+mpc-property-expander[focus] mpc-property-expander[expanded][selected]>mpc-expander-label,
+mpc-property-expander[focus] mpc-node-expander[expanded][selected]>mpc-expander-label,
+mpc-node-expander[focus] mpc-expander[collapsed][selected],
+mpc-node-expander[focus] mpc-property-expander[collapsed][selected],
+mpc-node-expander[focus] mpc-node-expander[collapsed][selected],
+mpc-node-expander[focus] mpc-expander[expanded][selected]>mpc-expander-label,
+mpc-node-expander[focus] mpc-property-expander[expanded][selected]>mpc-expander-label,
+mpc-node-expander[focus] mpc-node-expander[expanded][selected]>mpc-expander-label {
+  background: #08f6;
+  border-radius: 0.25em;
+}
+
+mpc-node-expander[expandable][type="element_node"][collapsed]>mpc-expander-label:last-child::before {
+  content: "...";
+  width: auto;
+  height: auto;
+  line-height: inherit;
+}
+
+mpc-property-expander-key {
+  color: #808;
+}
+
+mpc-property-expander[type="boolean"]>mpc-expander-label {
+  color: #04f;
+}
+
+mpc-property-expander[type="function"]>mpc-expander-label {
+  color: #04f;
+}
+
+mpc-property-expander[type="null"]>mpc-expander-label {
+  color: #a09;
+}
+
+mpc-property-expander[type="number"]>mpc-expander-label {
+  color: #00f;
+}
+
+mpc-property-expander[type="regexp"]>mpc-expander-label {
+  color: #c11;
+}
+
+mpc-property-expander[type="string"]>mpc-expander-label {
+  color: #c11;
+}
+
+mpc-property-expander[type="symbol"]>mpc-expander-label {
+  color: #08f;
+}
+
+mpc-property-expander[type="undefined"]>mpc-expander-label {
+  color: #a09;
+}
+
+mpc-property-expander[type="placeholder"]>mpc-expander-label {
+  color: #888;
+}
+
+mpc-node-expander>mpc-expander-label {
+  color: #888;
+}
+
+mpc-property-expander[type="symbol"][selected]>mpc-expander-label,
+mpc-property-expander[type="placeholder"]>mpc-expander-label,
+mpc-node-expander[selected]>mpc-expander-label {
+  color: #000;
+}
+
+mpc-node-expander[type="cdata_section_node"]>mpc-expander-label,
+mpc-node-expander[type="text_node"]>mpc-expander-label {
+  color: #222;
+  white-space: pre-line;
+}
+
+mpc-node-expander-tag {
+  color: #a0a;
+}
+
+mpc-node-expander-name {
+  color: #a00;
+}
+
+mpc-node-expander-value {
+  color: #00a;
+}
+
+mpc-node-expander[type="document_fragment_node"]>* {
+  border-left: 1px solid #888;
+  background-color: #f8f8f8;
+}
+
+mpc-node-expander[type="document_fragment_node"]>mpc-expander-label {
+  border-left: none;
+  background-color: initial;
+}

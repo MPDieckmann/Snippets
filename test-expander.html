@@ -1,0 +1,43 @@
+<!DOCTYPE html SYSTEM "head.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>MPC Terminal</title>
+  <script src="js/terminal/terminal.js"></script>
+  <script src="js/expander/expander.js"></script>
+  <script src="js/expander/propertyexpander.js"></script>
+  <script src="js/expander/nodeexpander.js"></script>
+  <link rel="stylesheet" href="ts/expander/expander.css" />
+</head>
+
+<body>
+  <mpc-expander id="expander"></mpc-expander>
+  <mpc-property-expander id="propertyExpander"></mpc-property-expander>
+  <mpc-node-expander id="nodeExpander" tabindex="0"></mpc-node-expander>
+  <mpc-terminal target="self" id="terminal"></mpc-terminal>
+  <script type="text/javascript">
+    var propertyExpander;
+    var nodeExpander;
+    var expander;
+    var terminal;
+    document.body.onload = function () {
+      propertyExpander = document.getElementById("propertyExpander");
+      nodeExpander = document.getElementById("nodeExpander");
+      expander = document.getElementById("expander");
+      terminal = document.getElementById("terminal");
+
+      Object.defineProperty(terminal, "shadowRoot", {
+        value: terminal._mpc_shadowRoot,
+        enumerable: true
+      });
+
+      propertyExpander.property = window;
+      nodeExpander.node = document;
+    }
+  </script>
+</body>
+
+</html>
